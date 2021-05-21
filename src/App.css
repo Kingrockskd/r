@@ -71,7 +71,7 @@ h2{
   background-color: #61dafb;
   background: rgb(9,9,121);
 background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 64%, rgba(2,0,36,1) 97%);
-  max-width: 900px;
+  max-width: inherit;
 }
 .App-logo {
   height: 40vmin;
