@@ -17,15 +17,15 @@ return(
         
         <button onClick={togle}>{show?'Hide':'ingredients'}</button>
         {show?(<div >
-            <ul>
+            <ol>
             {
                 i_a.map(e=>
 
-                    <li key={Math.random()}>=)  {e}</li>)
+                    <li key={Math.random()}> {e}</li>)
 
                   
             }
-            </ul>
+            </ol>
         </div>):console.log('ok')}
     </Card> 
 )
