@@ -9,11 +9,12 @@ function App() {
   const [input, setInput] = useState('')
   const [query, setQuery] = useState('chocolate')
   const [result, setResult] = useState([])
-
+  
   const reSearch = (e) => {
     e.preventDefault();
     setQuery(input)
     setInput('')
+    
   }
 
   useEffect(async () => {
@@ -21,6 +22,7 @@ function App() {
       const r = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}`);
       const re = await r.json();
       setResult(re.hits)
+   
    }
     catch (er) {
       console.log(er)

@@ -1,10 +1,16 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Card from './Card'
 function Output({recipe}){
-    /* ingredients,label,image */
+    /* ingredients,label,image
+     const [show,setShow]=useState(false) */
     const i_a=recipe.ingredientLines;
-    const [show,setShow]=useState(false)
- function togle(){setShow(!show)} 
+    const [show,setShow]=useState(recipe?true:false)
+    console.log(show);
+   useEffect(() => {
+       setShow(false)
+   }, [recipe])
+ function togle(e){e.preventDefault();
+     setShow(!show)} 
     
 return(
      <Card key={recipe.calories}>
@@ -20,10 +26,7 @@ return(
             <ol>
             {
                 i_a.map(e=>
-
                     <li key={Math.random()}> {e}</li>)
-
-                  
             }
             </ol>
         </div>):console.log('ok')}
