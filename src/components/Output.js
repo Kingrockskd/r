@@ -20,7 +20,10 @@ return(
             <ul>
             {
                 i_a.map(e=>
-                    <li key={Math.random()}>=)  {e}</li>)
+
+                    <li key={Math.random()}>-)  {e}</li>)
+
+                  
             }
             </ul>
         </div>):console.log('ok')}
